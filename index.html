@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>HTML 5 Canvas Logo</title>
+</head>
+<body onLoad="init();">
+	<canvas id="canvas" width="512" height="512">
+	</canvas>
+	<canvas id="5" width="512" height="512" style="position: absolute; left: 0; top: -10px;">
+	</canvas>
+</body>
+<script>
+	function init() {
+		ctx = document.getElementById('canvas').getContext('2d');
+		ctx.beginPath();
+		ctx.moveTo(74, 100);
+		ctx.lineTo(438, 100);
+		ctx.lineTo(405, 470);
+		ctx.lineTo(254, 512);
+		ctx.lineTo(108, 470);
+		ctx.fillStyle = "#e44d26";
+		ctx.fill();
+
+		ctx = document.getElementById('5').getContext('2d');
+
+		ctx.beginPath();
+		/*  ->  */
+		ctx.moveTo(142,176);
+		ctx.lineTo(370,176);
+		ctx.lineTo(366,222);
+		ctx.lineTo(192,222);
+		ctx.lineTo(196,268);
+		ctx.lineTo(362,268);
+		ctx.lineTo(349,408);
+		ctx.lineTo(256,434);
+		/*   \   */
+		ctx.lineTo(163,408);
+		/*  |  */
+		ctx.lineTo(156,336);
+		/*  ->  */
+		ctx.lineTo(202,336);
+		ctx.lineTo(205,372);
+
+		ctx.lineTo(257,386);
+		ctx.lineTo(307,372);
+		ctx.lineTo(311,314);
+		ctx.lineTo(154,314);
+		ctx.fillStyle = "#ffffff";
+		ctx.fill();
+	}
+</script>
+</html>
